@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+__MACOSX
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-*
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build files
+dist/
+build/ 

@@ -6,69 +6,91 @@
         <title>Frontend Test</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <body>
+    <body class="container">
         <header>
-            <nav class="container">
+            <nav>
                 <a href="/" class="logo">
-                    <img src="assets/img/logo.svg" alt="Logo" />
+                    <img src="assets/img/logo.svg" alt="SPARK" />
                 </a>
+                <div class="nav-links">
+                    <a href="#">Hjælp</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Om</a>
+                    <a href="#" class="forudbestilling">Forudbestilling</a>
+                </div>
             </nav>
         </header>
 
-        <main>
-            <section class="hero container">
-                <div class="hero-content">
-                    <h1>BMW R80 Bobber</h1>
-                    <p>
-                        The BMW R80 was produced by BMW Motorrad from 1978 to
-                        1995. It was a road motorcycle powered by an air-cooled
-                        flat-twin engine.
+        <main class="container-content">
+            <section class="hero">
+                <div class="hero-content-text">
+                    <h1>
+                        DET ULTIMATIVE<br />
+                        MODERNE BATTERI TIL<br />
+                        ENHVER MOTORCYKEL
+                    </h1>
+                    <p class="hero-content-text-description">
+                        Uanset om du kører en vintage, bygger din perfekte café
+                        racer eller bare gør din daglige motorcykel så pålidelig
+                        som det kan være.
                     </p>
-                    <div class="doodle-elements">
-                        <img
-                            src="assets/img/doodle_heat_left.svg"
-                            alt="Decorative heat left"
-                        />
-                        <img
-                            src="assets/img/doodle_light.svg"
-                            alt="Decorative light"
-                        />
-                        <img
-                            src="assets/img/doodle_heat_right.svg"
-                            alt="Decorative heat right"
-                        />
+                    <p class="hero-content-text-price">
+                        Vi fik dig dækket fra <strong>€99</strong>
+                    </p>
+                    <div class="cta-button-container">
+                        <a href="#" class="cta-button">FORUDBESTILLING</a>
+                        <div class="button-arrow">
+                            <img
+                                src="assets/img/doodle_arrow.svg"
+                                alt="Decorative arrow"
+                                class="doodle-arrow"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-content-picture">
                     <img
+                        class="hero-content-picture-img"
                         src="assets/img/bmw-r80-bobber.jpg"
                         alt="BMW R80 Bobber motorcycle"
                     />
-                    <img
-                        src="assets/img/doodle_arrow.svg"
-                        alt="Decorative arrow"
-                        class="doodle-arrow"
-                    />
-                </div>
-            </section>
+                    <div class="static-arrow-top">
+                        <img
+                            src="assets/img/doodle_light.svg"
+                            alt="Decorative arrow"
+                            class="doodle-arrow"
+                        />
+                    </div>
+                    <div class="static-arrow-left">
+                        <img
+                            src="assets/img/doodle_heat_left.svg"
+                            alt="Decorative arrow"
+                            class="doodle-arrow"
+                        />
+                    </div>
+                    <div class="static-arrow-right">
+                        <img
+                            src="assets/img/doodle_heat_right.svg"
+                            alt="Decorative arrow"
+                            class="doodle-arrow"
+                        />
+                    </div>
 
-            <section class="featured-in container">
-                <h2>Featured in</h2>
-                <div class="media-logos">
-                    <img src="assets/img/media_bikeexif.png" alt="Bike EXIF" />
-                    <img src="assets/img/media_chopcult.png" alt="Chop Cult" />
-                    <img src="assets/img/media_pipeburn.png" alt="Pipeburn" />
+                    <!-- <div class="static-arrow-container"></div> -->
                 </div>
-                <img
-                    src="assets/img/Greasy.png"
-                    alt="Greasy"
-                    class="greasy-logo"
-                />
             </section>
         </main>
 
         <footer class="container">
-            <p>&copy; 2024 All rights reserved</p>
+            <p class="footer-text">Som set i</p>
+            <section class="featured-in">
+                <div class="media-logos">
+                    <img src="assets/img/media_bikeexif.png" alt="Bike EXIF" />
+                    <img src="assets/img/media_pipeburn.png" alt="Pipeburn" />
+                    <img src="assets/img/Greasy.png" alt="Greasy" />
+                    <img src="assets/img/media_chopcult.png" alt="Chop Cult" />
+                </div>
+            </section>
         </footer>
     </body>
 </html>

@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #ff0000;
+    --font-family-base: 'Roag', sans-serif;
+}
+
 /* Font faces */
 @font-face {
     font-family: 'Roag';
@@ -76,15 +83,15 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
     font-weight: 300;
 }
 
 .nav-container .forudbestilling {
-    font-family: 'Roag', sans-serif;
+    font-family: var(--font-family-base);
     font-weight: 300;
     font-style: normal;
-    color: red;
+    color: var(--accent-color);
 }
 
 .nav-links-container {
@@ -105,7 +112,7 @@ header {
     margin-top: 30px;
     flex-shrink: 1;
     flex-grow: 1;
-    min-width: 450px;
+    min-width: 28.125rem; /* 450px / 16px */
     z-index: 1;
 }
 
@@ -118,10 +125,13 @@ header {
     white-space: nowrap;
 }
 
+.hero-content-text-description,
+.hero-content-text-price,
+.footer-text {
+    @extend .text-content;
+}
+
 .hero-content-text-description {
-    font-family: 'Roag', sans-serif;
-    font-weight: 300;
-    font-style: normal;
     font-size: 1.1rem;
     margin-bottom: 50px;
     max-width: 460px;
@@ -129,9 +139,6 @@ header {
 }
 
 .hero-content-text-price {
-    font-family: 'Roag', sans-serif;
-    font-weight: 300;
-    font-style: normal;
     font-size: 1.1rem;
     max-width: 460px;
     line-height: 1.5;
@@ -142,8 +149,8 @@ header {
     z-index: 0;
     flex-shrink: 0;
     flex-grow: 0;
-    width: 650px;
-    height: 650px;
+    width: 40.625rem; /* 650px / 16px */
+    height: 40.625rem; /* 650px / 16px */
 }
 
 .hero-content-picture-img {
@@ -164,11 +171,9 @@ header {
     position: relative;
     display: inline-block;
     background-color: hsl(328, 33%, 91%);
-    color: var(--primary-red);
+    color: var(--accent-color);
     text-decoration: none;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 0.8rem 1.25rem;
     border-radius: 30px;
     font-weight: 700;
     text-transform: uppercase;
@@ -203,8 +208,8 @@ header {
     background-size: 85%;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem; /* 100px / 16px */
+    height: 6.25rem; /* 100px / 16px */
 }
 
 /* Static arrow styles */
@@ -243,9 +248,6 @@ header {
 }
 
 .footer-text {
-    font-family: 'Roag', sans-serif;
-    font-weight: 300;
-    font-style: normal;
     font-size: 1.1rem;
     max-width: 460px;
     line-height: 1.5;
@@ -285,6 +287,16 @@ header {
     display: block;
 }
 
+/* Utility classes */
+.text-content {
+    font-family: var(--font-family-base);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 460px;
+}
+
 /* Responsive styles */
 @media (max-width: 1150px) {
     .container {
@@ -297,7 +309,7 @@ header {
         justify-content: center;
         padding: 0;
         background-image: url('assets/img/bmw-r80-bobber.jpg');
-        background-size: 300%;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -324,17 +336,17 @@ header {
         margin-top: 0;
         min-height: 800px;
         color: white;
-        padding: 60px 60px 30px 60px;
+        padding: 3.75rem 3.75rem 1.875rem; /* 60px 60px 30px / 16px */
     }
 
     .hero-content-text-title {
-        font-size: 4.1rem;
+        font-size: 3.5rem;
         line-height: 1.2;
-        margin-bottom: 90px;
+        margin-bottom: 5.625rem; /* 90px / 16px */
     }
 
     .hero-content-text-price {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         z-index: 0;
         margin-bottom: 20px;
     }
@@ -350,14 +362,14 @@ header {
 
     .cta-button {
         background-color: #b82020;
-        padding: 13px 35px;
+        padding: 0.8125rem 2.1875rem; /* 13px 35px / 16px */
         color: transparent;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .button-arrow {
-        width: 150px;
-        height: 150px;
+        width: 9.375rem; /* 150px / 16px */
+        height: 9.375rem; /* 150px / 16px */
         z-index: 5;
     }
 
@@ -387,11 +399,11 @@ header {
     .nav-links {
         width: 100%;
         justify-content: space-between;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
 
     .nav-container .forudbestilling {
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 2px;
     }
 

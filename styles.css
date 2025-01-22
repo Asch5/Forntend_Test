@@ -1,3 +1,4 @@
+/* Font faces */
 @font-face {
     font-family: 'Roag';
     src: url('assets/font/Roag-Light.otf') format('opentype');
@@ -38,7 +39,7 @@ img {
     height: auto;
 }
 
-/* Container */
+/* Container styles */
 .container {
     width: 100%;
     max-width: 1400px;
@@ -51,11 +52,9 @@ img {
     margin: 0 auto;
 }
 
-/* Header */
+/* Header and navigation styles */
 header {
     padding: 20px 0;
-    /* background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .logo {
@@ -63,11 +62,41 @@ header {
     width: 120px;
 }
 
-/* Hero Section */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+
+.nav-container .forudbestilling {
+    font-family: 'Roag', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: red;
+}
+
+.nav-links-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/* Hero section styles */
 .hero {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: nowrap; */
     align-items: flex-start;
     padding: 60px 20px;
 }
@@ -88,9 +117,6 @@ header {
     line-height: 1.5;
     white-space: nowrap;
 }
-.hero-content-text-title-small {
-    display: none;
-}
 
 .hero-content-text-description {
     font-family: 'Roag', sans-serif;
@@ -107,7 +133,6 @@ header {
     font-weight: 300;
     font-style: normal;
     font-size: 1.1rem;
-
     max-width: 460px;
     line-height: 1.5;
 }
@@ -118,7 +143,6 @@ header {
     flex-shrink: 0;
     flex-grow: 0;
     width: 650px;
-    /* flex-basis: 50%; */
     height: 650px;
 }
 
@@ -128,6 +152,7 @@ header {
     width: 100%;
 }
 
+/* CTA button styles */
 .cta-button-container {
     display: flex;
     align-items: flex-end;
@@ -144,42 +169,34 @@ header {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-
     border-radius: 30px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* Default button text */
 .cta-button::after {
-    content: ''; /* Initially empty */
-    position: absolute; /* Position it absolutely within the button */
-    top: 0; /* Align it to the top */
-    left: 0; /* Align it to the left */
-    right: 0; /* Align it to the right */
-    bottom: 0; /* Align it to the bottom */
-    display: flex; /* Use flexbox to center the text */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Change the color of the new text */
-    opacity: 0; /* Start with the new text hidden */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Change opacity on hover */
 .cta-button:hover::after {
-    opacity: 1; /* Show the new text on hover */
+    opacity: 1;
 }
 
 .cta-button:hover {
-    color: transparent; /* Hide the original text on hover */
+    color: transparent;
 }
-
-/* .button-arrow {
-    width: 100%;
-    height: 100%;
-} */
 
 .button-arrow {
     background-image: url('assets/img/doodle_arrow.svg');
@@ -190,15 +207,7 @@ header {
     height: 100px;
 }
 
-.static-arrow-container {
-    display: flex;
-    /* position: relative; */
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
-
+/* Static arrow styles */
 .static-arrow-left {
     position: absolute;
     top: 200px;
@@ -227,23 +236,7 @@ header {
     flex: 1;
 }
 
-/* .hero-image img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    filter: grayscale(100%);
-} */
-
-/* .doodle-elements {
-    position: relative;
-}
-
-.doodle-elements img {
-    width: 60px;
-    height: auto;
-} */
-
-/* Featured Section */
+/* Featured section styles */
 .featured-in {
     padding: 50px 20px;
     text-align: center;
@@ -278,12 +271,21 @@ header {
     opacity: 1;
 }
 
-/* Footer */
+/* Footer styles */
 .container footer {
     margin-top: 100px;
 }
 
-/* Responsive design */
+/* Language-specific styles */
+.english {
+    display: none;
+}
+
+.danish {
+    display: block;
+}
+
+/* Responsive styles */
 @media (max-width: 1150px) {
     .container {
         padding: 0;
@@ -291,7 +293,6 @@ header {
     .hero {
         position: relative;
         flex-direction: column;
-        /* text-align: center; */
         align-items: center;
         justify-content: center;
         padding: 0;
@@ -302,25 +303,24 @@ header {
     }
 
     .hero::before {
-        content: ''; /* Required for pseudo-elements */
-        position: absolute; /* Position it absolutely within the hero */
+        content: '';
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Black shade with 50% opacity */
-        z-index: 1; /* Ensure it sits above the background but below content */
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
 
     .hero-content-text {
-        position: relative; /* Position content above the shading */
-        z-index: 2; /* Ensure it sits above the shading */
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
-
         margin-top: 0;
         min-height: 800px;
         color: white;
@@ -328,19 +328,9 @@ header {
     }
 
     .hero-content-text-title {
-        display: none;
-        font-size: 3.5rem;
-    }
-
-    .hero-content-text-title-small {
-        display: block;
-        font-family: 'Roag', sans-serif;
-        font-weight: 800;
-        font-style: italic;
         font-size: 4.1rem;
         line-height: 1.2;
-        /* white-space: nowrap; */
-        margin-bottom: 50px;
+        margin-bottom: 90px;
     }
 
     .hero-content-text-price {
@@ -354,14 +344,14 @@ header {
     }
 
     .cta-button::after {
-        content: 'PREORDER'; /* The new text you want to display */
-        opacity: 1; /* Show the new text */
+        content: 'PREORDER';
+        opacity: 1;
     }
 
     .cta-button {
         background-color: #b82020;
-        padding: 20px 30px;
-        color: transparent; /* Hide the original text */
+        padding: 13px 35px;
+        color: transparent;
         font-size: 1.5rem;
     }
 
@@ -376,15 +366,6 @@ header {
         text-align: left;
     }
 
-    /* .doodle-elements {
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .doodle-elements img {
-        width: 40px;
-    } */
-
     .media-logos {
         display: flex;
         flex-direction: column;
@@ -392,48 +373,49 @@ header {
         gap: 20px;
     }
 
-    .doodle-arrow {
-        width: 60px !important;
-        bottom: -20px;
-        right: -10px;
+    .container footer {
+        margin-top: 50px;
+        padding: 0 20px;
     }
-}
 
-.container footer {
-    margin-top: 50px;
-    padding: 0 20px;
-}
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
 
-/* Add these new styles to your existing CSS */
-:root {
-    --primary-red: #ff0000;
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 1.4rem;
+    }
+
+    .nav-container .forudbestilling {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .english {
+        display: block;
+    }
+
+    .danish {
+        display: none;
+    }
 }
 
 /* Navigation styles */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.nav-links {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 300;
-}
-
-.nav-links .forudbestilling {
-    color: var(--primary-red);
-}
-
-/* @media (max-width: 750px) {
+@media (max-width: 750px) {
     .hero-content-text {
-        padding: 0;
+        padding: 30px 10px;
     }
-} */
+
+    .hero-content-text-title {
+        font-size: 3.3rem;
+    }
+}

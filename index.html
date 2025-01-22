@@ -11,15 +11,25 @@
     </head>
     <body class="container">
         <header>
-            <nav>
+            <nav class="nav-container">
                 <a href="/" class="logo">
                     <img src="assets/img/logo.svg" alt="SPARK" />
                 </a>
                 <div class="nav-links">
-                    <a href="#">Hjælp</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Om</a>
-                    <a href="#" class="forudbestilling">Forudbestilling</a>
+                    <div class="nav-links-container">
+                        <a class="danish" href="#">Hjælp</a>
+                        <a class="english" href="#">Help</a>
+                        <a class="danish" href="#">FAQ</a>
+                        <a class="english" href="#">FAQ</a>
+                        <a class="danish" href="#">Om</a>
+                        <a class="english" href="#">About</a>
+                    </div>
+                    <a class="forudbestilling danish" href="#"
+                        >Forudbestilling</a
+                    >
+                    <a class="forudbestilling english" href="#"
+                        ><strong>Preorder</strong></a
+                    >
                 </div>
             </nav>
         </header>
@@ -27,35 +37,40 @@
         <main class="container-content">
             <section class="hero">
                 <div class="hero-content-text">
-                    <h1 class="hero-content-text-title">
+                    <h1 class="hero-content-text-title danish">
                         DET ULTIMATIVE<br />
                         MODERNE BATTERI TIL<br />
                         ENHVER MOTORCYKEL
                     </h1>
-                    <h1 class="hero-content-text-title-small">
+                    <h1 class="hero-content-text-title english">
                         THE ULTIMATE<br />
                         MODERN BATTERY<br />
                         FOR<br />
                         ANY MOTORCYCLE
                     </h1>
 
-                    <p class="hero-content-text-description">
+                    <p class="hero-content-text-description danish">
                         Uanset om du kører en vintage, bygger din perfekte café
                         racer eller bare gør din daglige motorcykel så pålidelig
                         som det kan være.
                     </p>
-                    <p class="hero-content-text-price">
+                    <p class="hero-content-text-description english">
+                        Whether you ride a vintage, build your perfect café
+                        racer or just make your daily motorcycle as reliable as
+                        it can be.
+                    </p>
+                    <p class="hero-content-text-price danish">
                         Vi fik dig dækket fra <strong>€99</strong>
                     </p>
+                    <p class="hero-content-text-price english">
+                        We got you covered from <strong>€99</strong>
+                    </p>
                     <div class="cta-button-container">
-                        <a href="#" class="cta-button">FORUDBESTILLING</a>
-                        <div class="button-arrow">
-                            <!-- <img
-                                src="assets/img/doodle_arrow.svg"
-                                alt="Decorative arrow"
-                                class="doodle-arrow"
-                            /> -->
-                        </div>
+                        <a href="#" class="cta-button danish"
+                            >FORUDBESTILLING</a
+                        >
+                        <a href="#" class="cta-button english">PREORDER</a>
+                        <div class="button-arrow"></div>
                     </div>
                 </div>
                 <div class="hero-content-picture">
@@ -92,7 +107,8 @@
         </main>
 
         <footer class="container">
-            <p class="footer-text">Som set i</p>
+            <p class="footer-text danish">Som set i</p>
+            <p class="footer-text english">As seen in</p>
             <section class="featured-in">
                 <div class="media-logos">
                     <img src="assets/img/media_bikeexif.png" alt="Bike EXIF" />

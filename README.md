@@ -1,21 +1,23 @@
-# BMW R80 Bobber Landing Page
+# Frontend Test - Motorcycle Battery Landing Page
 
-A responsive landing page showcasing the BMW R80 Bobber motorcycle. This project demonstrates modern web development practices with clean, semantic HTML5 and CSS3.
+A responsive landing page for a modern motorcycle battery product, built with HTML and CSS.
 
 ## Features
 
--   Responsive design that works on desktop and mobile devices
--   Custom font implementation (Roag font family)
--   Modern layout using Flexbox
--   Decorative SVG elements
--   Media partner showcase section
+-   Fully responsive design that adapts to different screen sizes
+-   Bilingual support (Danish/English)
+-   Modern, clean interface
+-   Semantic HTML structure
+-   Optimized for accessibility
+-   CSS custom properties (variables) for consistent styling
 
 ## Technologies Used
 
 -   HTML5
 -   CSS3
--   Custom fonts (Roag family)
--   Responsive design principles
+-   Custom Fonts (Roag)
+
+## Project Structure
 
 ## Preview
 
@@ -27,6 +29,40 @@ To run this project locally:
 
 1. Clone the repository
 2. Open `index.html` in your browser
+
+## Browser Support
+
+-   Chrome (latest)
+-   Firefox (latest)
+-   Safari (latest)
+-   Edge (latest)
+
+## Responsive Breakpoints
+
+-   Desktop: 1150px and above
+-   Tablet/Mobile: Below 1150px
+-   Mobile: Below 750px
+
+## CSS Organization
+
+The CSS is organized into the following sections:
+
+-   Font faces
+-   Reset and base styles
+-   Container styles
+-   Header and navigation styles
+-   Hero section styles
+-   CTA button styles
+-   Static arrow styles
+-   Featured section styles
+-   Footer styles
+-   Language-specific styles
+-   Utility classes
+-   Responsive styles
+
+## Author
+
+Anton Shashlov
 
 ## Credits
 
